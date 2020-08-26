@@ -1,0 +1,184 @@
+/* style.css */
+
+<!-- index.html -->
+<head>
+
+/* fonts */
+  <!-- [...] -->
+  <link href="https://fonts.googleapis.com/css?family=Chivo:700|Overpass:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Kreon:wght@300&display=swap" rel="stylesheet">
+.googleapis.com/css2?family=Kreon:wght@300&display=swap" rel="stylesheet">
+  <!-- [...] -->
+</head>
+
+body {
+  font-family: Overpass;
+  margin: 0;
+  color: #404042;
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+font-family: 'Kreon', serif;
+  color: #D62598;
+}
+
+p {
+  color: #404042;
+  opacity: .7;
+  font-family: 'Kreon', serif;
+}
+
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+  color: #D62598;
+}
+
+.banner h1 {
+  color: #D62598;
+  font-size: 100px;
+  font-family: 'Just Me Again Down Here', cursive;
+  margin: 0;
+}
+
+.banner p {
+  color: white;
+  font-size: 24px;
+  font-family: 'Kreon', serif;
+}
+
+.button-blue {
+  background-color: #D62598;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Kreon', serif;
+  transition: .3s;
+}
+
+.button-blue:hover {
+  background-color: #D62598;
+  font-family: 'Kreon', serif;
+  transform: scale(1.06);
+}
+
+.card-white {
+  background: white;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  padding: 24px;
+  margin: 8px;
+  flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-white: hover {
+  transform: scale(1.06);
+}
+
+.card-white img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-white h3 {
+  margin-bottom: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.footer {
+  background: #D62598;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  margin: auto;
+}
+
+.footer p {
+  color: white;
+  font-family: 'Kreon', serif;
+}
+
+.typewriter {
+    animation: animated-text 4s steps(31, end);
+    animation-iteration-count: infinite;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+/* Cards media queries */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-white {
+    width: auto;
+  }
+}
+  
+/* Container media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 800px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .typewriter {
+    animation: animated-text 4s steps(31, end);
+    animation-iteration-count: infinite;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+/* animation for typewriter */
+@keyframes animated-text{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
